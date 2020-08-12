@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<androidx.fragment.app.FragmentContainerView
+		android:id="@+id/add_location_map_view"
+		android:name="com.google.android.gms.maps.SupportMapFragment"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<LinearLayout
+		android:id="@+id/add_location_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#CCFFFFFF"
+		android:minHeight="56dp"
+		android:orientation="vertical"
+		android:paddingBottom="8dp"
+		android:paddingTop="8dp"
+		android:clickable="true"
+		android:focusable="true"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<TextView
+			android:id="@+id/add_location_timezone"
+			style="@style/Widget.TextView.Primary"
+			android:layout_marginEnd="16dp"
+			android:layout_marginStart="16dp"
+			tools:text="Europe/London"/>
+
+		<TextView
+			android:id="@+id/add_location_coordinates"
+			style="@style/Widget.TextView.Secondary"
+			android:layout_marginEnd="16dp"
+			android:layout_marginStart="16dp"
+			tools:text="51.500334, -0.085013"/>
+
+	</LinearLayout>
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/add_location_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:backgroundTint="?colorPrimary"
+		android:src="@drawable/ic_done"
+		android:tint="?colorControlNormal"
+		android:clickable="true"
+		android:focusable="true"
+		app:borderWidth="0dp"
+		app:fabSize="normal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

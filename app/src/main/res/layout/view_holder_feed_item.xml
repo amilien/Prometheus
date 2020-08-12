@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="?selectableItemBackground"
+	android:paddingBottom="16dp"
+	android:paddingTop="16dp">
+
+	<TextView
+		android:id="@+id/item_location_timezone"
+		style="@style/Widget.TextView.Subhead"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:textColor="@color/textColorSubhead"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="Europe/London"/>
+
+	<TextView
+		android:id="@+id/item_location_temperature"
+		android:layout_width="56dp"
+		android:layout_height="56dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/background_round"
+		android:backgroundTint="@color/backgroundColorTemperature"
+		android:gravity="center"
+		android:textColor="@android:color/white"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/item_location_timezone"
+		tools:text="17.5'C"/>
+
+	<TextView
+		android:id="@+id/item_location_text"
+		style="@style/Widget.TextView.Primary"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		app:layout_constraintBaseline_toBaselineOf="@id/item_location_temperature"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0"
+		app:layout_constraintStart_toEndOf="@id/item_location_temperature"
+		tools:text="51.500334, -0.085013"/>
+
+	<TextView
+		android:id="@+id/item_location_summary"
+		style="@style/Widget.TextView.Primary"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:fontFamily="@font/roboto_italic"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/item_location_temperature"
+		tools:text="Light Rain"/>
+
+	<View
+		android:id="@+id/item_location_wind_speed_icon"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/background_rounded_rect"
+		android:backgroundTint="@color/backgroundColorWindSpeed"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/item_location_summary"/>
+
+	<TextView
+		android:id="@+id/item_location_wind_speed_title"
+		style="@style/Widget.TextView.Primary"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="32dp"
+		android:text="@string/wind_speed_title"
+		app:layout_constraintBottom_toBottomOf="@id/item_location_wind_speed_icon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0"
+		app:layout_constraintStart_toEndOf="@id/item_location_wind_speed_icon"
+		app:layout_constraintTop_toTopOf="@id/item_location_wind_speed_icon"/>
+
+	<TextView
+		android:id="@+id/item_location_wind_speed"
+		style="@style/Widget.TextView.Secondary"
+		android:layout_marginEnd="16dp"
+		android:textSize="16sp"
+		app:layout_constraintBaseline_toBaselineOf="@id/item_location_wind_speed_title"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1"
+		app:layout_constraintStart_toEndOf="@id/item_location_wind_speed_title"
+		tools:text="1.4 KM/H"/>
+
+	<View
+		android:id="@+id/item_location_wind_humidity_icon"
+		android:layout_width="24dp"
+		android:layout_height="24dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:background="@drawable/background_rounded_rect"
+		android:backgroundTint="@color/backgroundColorHumidity"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/item_location_wind_speed_icon"/>
+
+	<TextView
+		android:id="@+id/item_location_humidity_title"
+		style="@style/Widget.TextView.Primary"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="32dp"
+		android:text="@string/humidity_title"
+		app:layout_constraintBottom_toBottomOf="@id/item_location_wind_humidity_icon"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0"
+		app:layout_constraintStart_toEndOf="@id/item_location_wind_humidity_icon"
+		app:layout_constraintTop_toTopOf="@id/item_location_wind_humidity_icon"/>
+
+	<TextView
+		android:id="@+id/item_location_humidity"
+		style="@style/Widget.TextView.Secondary"
+		android:layout_marginEnd="16dp"
+		android:textSize="16sp"
+		app:layout_constraintBaseline_toBaselineOf="@id/item_location_humidity_title"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="@id/item_location_wind_speed"
+		tools:text="0.87"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
